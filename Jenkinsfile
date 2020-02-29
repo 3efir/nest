@@ -9,7 +9,8 @@ pipeline {
         }
         stage('Install project') {
             steps {
-                sh 'cd nest'
+                sh 'pwd'
+                sh 'ls -la'
                 sh 'npm ci'
             }
         }
