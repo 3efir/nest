@@ -2,10 +2,16 @@ pipeline {
     agent { label 'development' }
 
     stages {
-        stage('Check npm version') {
+        stage('Install project') {
             steps {
-                sh 'npm --version'
+                sh 'npm ci'
             }
+        }
+        stage('Build project') {
+            sh 'nmp run build'
+        }
+        stage('Test project') {
+            sh 'npm run test'
         }
     }
 }
