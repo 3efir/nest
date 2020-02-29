@@ -8,10 +8,14 @@ pipeline {
             }
         }
         stage('Build project') {
-            sh 'nmp run build'
+            steps {
+                sh 'nmp run build'
+            }
         }
         stage('Test project') {
-            sh 'npm run test'
+            steps {
+                sh 'npm run test'
+            }
         }
     }
 }
