@@ -15,7 +15,7 @@ pipeline {
         }
         stage('Build project') {
             steps {
-                sh 'nmp run build'
+                sh 'npm run build'
             }
         }
         stage('Test project') {
