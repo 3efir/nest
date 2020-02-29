@@ -9,8 +9,7 @@ pipeline {
         }
         stage('Install project') {
             steps {
-                sh 'pwd'
-                sh 'ls -la'
+                sh 'git status'
                 sh 'npm ci'
             }
         }
