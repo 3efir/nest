@@ -4,6 +4,7 @@ pipeline {
     stages {
         stage('Install project') {
             steps {
+                sh 'cd nest'
                 sh 'npm ci'
             }
         }
