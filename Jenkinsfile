@@ -3,7 +3,9 @@ pipeline {
 
     stages {
         stage('Checkout project') {
-            checkout([$class: 'GitSCM', branches: [[name: '*/6.3.0']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'Default', submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/3efir/nest.git']]])
+            steps { 
+                checkout([$class: 'GitSCM', branches: [[name: '*/6.3.0']], doGenerateSubmoduleConfigurations: false, extensions: [], gitTool: 'Default', submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/3efir/nest.git']]])
+            }
         }
         stage('Install project') {
             steps {
